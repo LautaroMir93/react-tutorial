@@ -35,7 +35,8 @@ class App extends Component {
         .then(json => {
           const { tracks } = json
           this.setState({tracks});
-        })
+          console.log(tracks);
+        })  
       });
     }
   }

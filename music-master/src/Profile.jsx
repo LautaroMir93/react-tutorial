@@ -6,7 +6,6 @@ class Profile extends Component{
   render(){
     let artist = { name: '', followers: {total: '' }, images: [{url: ''}], genres:[], tracks: [] };
     artist = (this.props.artist !== null && this.props.artist !== undefined) ? this.props.artist : artist;
-
     return(
       <div className="profile">
         <img className="profile-img" src={artist.images[0].url} alt="Profile"/>
