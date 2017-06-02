@@ -14,17 +14,22 @@ import './styles/index.css';
 
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user){
-    console.log('User has signed in ', user);
+    // console.log('User has signed in ', user);
     const { email } = user;
     store.dispatch(logUser(email));
     browserHistory.push('/app');
   } else {
-    console.log('User still not signed in.');
+    // console.log('User still not signed in.');
     browserHistory.replace('/signin');
   }
 })
 
-const store = createStore(mainReducer);
+ /* eslint-disable no-underscore-dangle */
+  const store = createStore(
+   mainReducer, /* preloadedState, */
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
+ /* eslint-enable */
 
 ReactDOM.render(
   <Provider store={store}>
