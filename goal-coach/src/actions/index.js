@@ -9,9 +9,10 @@ export const logUser = email => {
   return action;
 }
 
-export const setGoals = () =>{
+export const setGoals = (goals) =>{
   const action = {
-    type:SET_GOALS
+    type:SET_GOALS,
+    goals
   }
   return action;
 }

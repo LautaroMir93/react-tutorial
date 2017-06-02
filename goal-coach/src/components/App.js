@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{margin: '5px'}}>
         <div>
           <h3>Goals</h3>
           <AddGoal />
