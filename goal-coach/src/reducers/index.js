@@ -4,7 +4,7 @@ let user = {
   email:null
 }
 
-export default (state = user, action) =>
+export default (state = user, action) =>{
   switch (action.type){
     case SIGNED_IN:
       const {email} = action;
@@ -15,3 +15,4 @@ export default (state = user, action) =>
     default:
       return user;
   }
+}

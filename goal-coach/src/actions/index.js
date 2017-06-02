@@ -5,4 +5,5 @@ export const logUser = email => {
     type: SIGNED_IN,
     email
   }
+  return action;
 }
