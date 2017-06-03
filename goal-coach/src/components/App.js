@@ -13,19 +13,20 @@ class App extends Component {
     return (
       <div className="App" style={{margin: '5px'}}>
         <div>
-          <h3>Goals</h3>
+          <h3>Goal Coach</h3>
           <AddGoal />
+          <hr/>
+          <h4>Goals</h4>
+          <hr/>
           <GoalList />
         </div>
         <button className="btn btn-danger" onClick={() => this.signOut()}>Sign out</button>
       </div>
-
     );
   }
 }
 
 function mapStateToProps(state){
-    // console.log('state', state);
     return{}
 }
 
